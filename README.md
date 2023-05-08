@@ -1,11 +1,7 @@
-<h1 align="center">Hi 👋, I'm Eneas Diaz</h1>
-<h3 align="center">A passionate frontend developer from Argentina</h3>
+<h1 align="center">Hi 👋 this project is MERCURY_MACETAS</h1>
+<h3 align="center">It is an entrepreneurship of artistic pots.</h3>
 
 - 🔭 I’m currently working on **MERCURY-MACETAS**
-
-- 🌱 I’m currently learning **Web development**
-
-- 💬 Ask me about **electricity, mechanic and anime**
 
 - 📫 How to reach me **eneasdc@gmail.com**
 
