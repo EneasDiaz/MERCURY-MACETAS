@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Mercury - Contacto</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/logo.png" alt="logo mercury" width="50" height="60"
+                        class="d-inline-block align-text-center">
+                    MERCURY MACETAS
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="nav d-flex justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link enlace" href="./galeria.html">GALERIA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link enlace" href="./productos.html">PRODUCTOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link enlace" href="./nosotros.html">NOSOTROS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link enlace" href="./contacto.html">CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="contacto-contenedor">
+            <section class="contacto-contenedor-primera">
+                <div class="contacto-contenedor-primera-numero">
+                    <div>
+                        <h1>CONTACTO</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, reiciendis <a href="https://www.whatsapp.com/" target="_blank">+54 01145478965</a></p>
+                    </div>
+                    <div>
+                        <h2>UBICACION</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3910.1410800186763!2d-58.516515539072785!3d-34.50228552772743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDMwJzA2LjIiUyA1OMKwMzAnNTkuMyJX!5e0!3m2!1ses-419!2sar!4v1680538351964!5m2!1ses-419!2sar"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="contacto-contenedor-primera-fomulario d-flex align-items-center">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">NOMBRES</label>
+                            <input type="text" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">APELLIDOS</label>
+                            <input type="text" class="form-control" id="inputPassword4">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">EMAIL</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text"></div>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">DIRECION</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="(CALLE, NUMERO)">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress2" class="form-label">ESPECIFICACION</label>
+                            <input type="text" class="form-control" id="inputAddress2"
+                                placeholder="(CASA, DEPARTAMENTO, NEGOCIO)">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">CIUDAD</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">PAIS</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>...</option>
+                                <option>ARGENTINA</option>
+                                <option>URUGUAY</option>
+                                <option>PARAGUAY</option>
+                                <option>BOLIVIA</option>
+                                <option>BRASIL</option>
+                                <option>CHILE</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputZip" class="form-label">CO. POSTAL</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">ESCRIBINOS</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center">
+                            <button type="submit">ENVIAR</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <h4>MERCURY MACETAS</h4>
+            <div>
+                <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.whatsapp.com/" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
