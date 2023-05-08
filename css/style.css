@@ -554,9 +554,30 @@ grid-area: tres;
     flex-wrap: wrap;
 }
 
-.btn-primary {
+.btn-primary{
     background-color: #4B443F;
     border-color: black;
+}
+
+.btn-primary:hover{
+    background-color: black;
+    border-color: black;
+}
+
+.btn-primary:active{
+    background-color: #4B443F;
+    border-color: #4B443F;
+    box-shadow: none;
+}
+
+.btn-primary:focus{
+    background-color: #4B443F;
+    border-color: #4B443F;
+    box-shadow: none;
+}
+
+.btn-primary:active:focus{
+    box-shadow: none;
 }
 
 .card{
