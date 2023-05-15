@@ -1,0 +1,31 @@
+footer{
+    background-color: #91877D;
+    text-align: center;
+    padding-bottom: 10px;
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h4{
+            font-size: 30px;
+            margin: 10px;
+        }
+        div{
+            margin-right: 10px;
+            a{
+                margin: 5px;
+                color: #4B443F;
+                i{
+                    font-size: 35px;
+                    &:hover{
+                        color: #4B443F;
+                    }
+                }
+            }
+        }
+    }
+    p{
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,491 @@
+@media screen and (max-width:1550px){
+    .galeria{
+        .galeria-primera{
+            img{
+                width: 80%;
+                height: 500px;
+            }
+        }
+        .galeria-segunda-contenedor{
+            padding: 75px; ;
+            display: grid;
+            grid-auto-rows: 200px;
+            grid-template-columns: repeat(4,1fr);
+            gap: 30px;
+            grid-template-areas: 
+            "uno dos tres tres"
+            "uno dos tres tres"
+            "cuatro cuatro cuatro cuatro"
+            "cinco cinco seis seis"
+            "cinco cinco seis seis"
+            "siete siete siete siete"
+            "ocho nueve diez diez"
+            "ocho nueve diez diez"
+            ;
+        }
+    }
+    .nosotros{
+        .nosotros-segunda{
+            div{ 
+                p{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    .contacto-contenedor{
+        .contacto-contenedor-primera{
+            flex-direction: column;
+            align-items: center;
+            .contacto-contenedor-primera-numero{
+                height: 550px;
+            width: 100%;
+            flex-direction: row;
+                div{
+                    width: 50%;
+                    h2{
+                        font-size: 60px;
+                    }
+                    p{
+                        width: 90%;
+                    }
+                }
+            }
+            .contacto-contenedor-primera-fomulario{
+                form{
+                    margin: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1350px){
+    .hero{
+        .hero-contenedor{
+            width: 100%;
+            img{
+                width: 100vw;
+            }
+        }
+    }
+    .productos-macetas{
+        flex-direction: column;
+    }
+    .productos{
+        .revers{
+            h2{
+                order: 0;
+            }
+        }
+    }
+    .contacto-contenedor{
+        .contacto-contenedor-primera{
+            .contacto-contenedor-primera-fomulario{
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1150px){
+    .galeria{
+        .galeria-segunda-contenedor{
+            padding: 75px; ;
+            display: grid;
+            grid-auto-rows: 200px;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+            grid-template-areas: 
+            "uno dos tres"
+            "cuatro cuatro tres"
+            "cinco cinco seis"
+            "cinco cinco seis"
+            "siete siete siete"
+            "ocho nueve diez"
+            "ocho nueve diez"
+            ;
+        }
+    }
+    .nosotros{
+        .nosotros-segunda{
+            div{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+                img{
+                    width: 320px;
+                }
+                p{
+                    width: 75%;
+                }
+            }
+        }
+    }  
+}
+
+@media screen and (max-width:1000px){
+    .hero{
+        .hero-contenedor{
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            div{
+                align-items: center;
+                margin: 0;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                h1{
+                    margin: 0;
+                    padding-top: 25px;
+                }
+                p{
+                    width: 100%;
+                    margin: 0;
+                    padding-bottom: 25px;
+                }
+            }
+            img{
+                display: none;
+            }
+            .imagen-vertical{
+                display: inline;
+                width: 70%;
+                
+            }
+        }
+    }
+    .galeria{
+        .galeria-segunda-contenedor
+        div{
+            p{
+                font-size: 35px;
+            }
+        }
+    }
+    .contacto-contenedor{
+        .contacto-contenedor-primera{
+            .contacto-contenedor-primera-numero{
+                flex-direction: column;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px){
+    .navbar-collapse{
+        border: 1px solid #4B443F;
+    }
+    .contacto-contenedor{
+        .contacto-contenedor-primera{
+            .contacto-contenedor-primera-fomulario{
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:900px){
+    .galeria{
+        .galeria-primera{
+            img{
+                width: 100%;
+            }
+        }
+        .galeria-segunda-contenedor{
+            padding: 75px; ;
+            display: grid;
+            grid-auto-rows: 200px;
+            grid-template-columns: repeat(2,1fr);
+            gap: 30px;
+            grid-template-areas: 
+            "uno dos "
+            "tres cuatro"
+            "tres cuatro"
+            "cinco seis"
+            "siete ocho"
+            "siete ocho"
+            "nueve diez"
+            ;   
+        }
+    }
+}
+
+@media screen and (max-width:870px){
+    .index-segunda{
+        div{
+            img{
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+    .nosotros{
+        .nosotros-primera{
+            .nosotros-primera-cards{
+                div{
+                    width: 80%;
+                    img{
+                        width: 330px;
+                    }
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:825px){
+    .hero{
+        .hero-contenedor{
+            div{
+                width: 75%;
+            }
+            .imagen-vertical{
+                width: 100%;
+            }
+        }
+    }
+    .contacto-contenedor{
+        .contacto-contenedor-primera{
+            .contacto-contenedor-primera-fomulario{
+                width: 100%;
+                form{
+                    margin: 20px;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:750px){
+    .index-segunda{
+        p{
+            margin: 0;
+            width: 80%;
+        }
+    }
+    .galeria{
+        .galeria-primera{
+            img{
+                height: 300px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px){
+    .index-segunda{
+        p{
+            font-size: 30px;
+            font-weight: 300;
+        }
+    }
+    .galeria{
+        .galeria-segunda-contenedor{
+            padding: 35px;
+            display: grid;
+            grid-auto-rows: auto;
+            grid-template-columns: repeat(1,1fr);
+            gap: 30px;
+            grid-template-areas: 
+            "uno"
+            "dos"
+            "tres"
+            "cuatro"
+            "cinco"
+            "seis"
+            "siete"
+            "ocho"
+            "nueve"
+            "diez"
+            ;
+            div{
+                padding: 30px;
+            }
+        }
+    }
+    .nosotros{
+        .nosotros-primera{
+            .nosotros-primera-cards{ 
+                div{
+                    img{
+                        width: 270px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:680px){
+    .index-segunda{
+        div{
+            img{
+                margin:  15px;
+            }
+        }
+    }
+    .contacto-contenedor{
+        .contacto-contenedor-primera{
+            .contacto-contenedor-primera-numero{
+                div{
+                    width: 100%;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    .index-segunda{
+        p{
+            font-size: 25px;
+            font-weight: 400;
+        }
+    }
+}
+
+@media screen and (max-width:560px){
+    .hero{
+        .hero-contenedor{
+            div{
+                width: 100%;
+                p{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    .nosotros{
+        .nosotros-segunda{
+            div{
+                p{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:500px){
+    .index-primera{
+        flex-direction: column-reverse;
+    }
+    .galeria{
+        .galeria-primera{
+            img{
+                height: 250px;
+            }
+        }
+    }
+    .nosotros{
+        .nosotros-segunda{
+            div{
+                p{
+                    font-size: 17px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    .contacto-contenedor{
+        .contacto-contenedor-primera{
+            .contacto-contenedor-primera-numero{
+                div{
+                    h1{
+                        font-size: 40px;
+                    }
+                    h2{
+                        font-size: 40px;
+                    }
+                    p{
+                        font-size: 20px;
+                        margin: 0;
+                    }
+                    iframe{
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:450px){
+    .index-segunda{
+        p{
+            width: 90%;
+            font-size: 20px;
+        }
+    }
+    .nosotros{
+        .nosotros-primera{
+            .nosotros-primera-cards{
+                div{
+                    img{
+                        width: 250px;
+                    }
+                    p{
+                        font-size: 17px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        .nosotros-segunda{
+            div{
+                img{
+                    width: 280px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:430px){
+    .hero{
+        .hero-contenedor{
+            div{
+                h1{
+                    font-size: 35px;
+                }
+                p{
+                    font-size: 20px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    .galeria{
+        .galeria-segunda-contenedor{
+            div{
+                p{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    .contacto-contenedor{
+        .contacto-contenedor-primera{
+            .contacto-contenedor-primera-numero{
+                div{
+                    iframe{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,33 @@
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    nav{
+        background-color: #91877D;
+        border-bottom: 1px solid #4B443F;
+        div{
+            a{
+                color: #4B443F !important;
+                img{
+                    margin-left: 3px;
+                    margin-right: 3px;
+                }
+            }
+            div{
+                ul{
+                    li{
+                        .enlace{
+                            font-size: 20px;
+                            font-weight: 400;
+                            padding: 5px;
+                            margin: 5px;
+                            &:hover{
+                                color: #4B443F;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
