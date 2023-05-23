@@ -1,88 +1,79 @@
-.galeria{
-    background-color: #CFC1B4;
-    .galeria-primera{
-        font-size: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h1{
-            margin: 30px;
-            font-weight: 500;
-            font-size: 60px;
-            text-align: center;
-        }
-        img{    
-            width: 75vw;
-            height: 75vh;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0px 1px 44px -4px rgba(0,0,0,0.75);
-            -webkit-box-shadow: 0px 1px 44px -4px rgba(0,0,0,0.75);
-            -moz-box-shadow: 0px 1px 44px -4px rgba(0,0,0,0.75);
-        }
+
+.galeria-primera{
+    font-size: 0;
+    @include flex (flex, column, center, center);
+    h1{
+        margin: 30px;
+        font-weight: 500;
+        font-size: nth($font-size, 7);
+        text-align: center;
     }
-    .galeria-segunda-contenedor{
-        padding: 150px;
-        display: grid;
-        grid-auto-rows: 300px;
-        grid-template-columns: repeat(5,1fr);
-        gap: 30px;
-        grid-template-areas: 
-        "uno dos tres tres tres"
-        "cuatro cuatro tres tres tres"
-        "cinco cinco cinco seis seis"
-        "cinco cinco cinco siete siete"
-        "ocho nueve diez diez diez"
-        "ocho nueve diez diez diez"
-        ;
-        div{
-            .galeria-foto{
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
-                border-radius: 10px;
-                box-shadow: 0px 1px 44px -4px rgba(0,0,0,0.75);
-                -webkit-box-shadow: 0px 1px 44px -4px rgba(0,0,0,0.75);
-                -moz-box-shadow: 0px 1px 44px -4px rgba(0,0,0,0.75);
-            }
-        }
-        .primer-item{
-            grid-area: uno;
-        }
-        .segundo-item{
-            grid-area: dos;
-        }
-        .tercer-item{
-            grid-area: tres;
-        }
-        .cuarto-item{
-            grid-area: cuatro;
-            font-size: 50px;
-            margin: auto;
-            text-align: center;
-        }
-        .quinto-item{
-            grid-area: cinco;
-        }
-        .sexto-item{
-            grid-area: seis;
-        }
-        .septimo-item{
-            grid-area: siete;
-            font-size: 50px;
-            margin: auto;
-            text-align: center;
-        }
-        .octavo-item{
-            grid-area: ocho;
-        }
-        .noveno-item{
-            grid-area: nueve;
-        }
-        .decimo-item{
-            grid-area: diez;
-        }
+    img{    
+        width: 75vw;
+        height: 75vh;
+        object-fit: cover;
+        border-radius: $bd-radius;
+        @extend %sombra;
     }
 }
-
+.galeria-segunda-contenedor{
+    padding: 150px;
+    display: grid;
+    grid-auto-rows: 300px;
+    grid-template-columns: repeat(5,1fr);
+    gap: 30px;
+    grid-template-areas: 
+    "uno dos tres tres tres"
+    "cuatro cuatro tres tres tres"
+    "cinco cinco cinco seis seis"
+    "cinco cinco cinco siete siete"
+    "ocho nueve diez diez diez"
+    "ocho nueve diez diez diez"
+    ;
+    div{
+        .galeria-foto{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: $bd-radius;
+            @extend %sombra;
+        }
+    }
+    .primer-item{
+        grid-area: uno;
+    }
+    .segundo-item{
+        grid-area: dos;
+    }
+    .tercer-item{
+        grid-area: tres;
+    }
+    .cuarto-item{
+        grid-area: cuatro;
+        font-size: nth($font-size, 6);
+        margin: auto;
+        text-align: center;
+    }
+    .quinto-item{
+        grid-area: cinco;
+    }
+    .sexto-item{
+        grid-area: seis;
+    }
+    .septimo-item{
+        grid-area: siete;
+        font-size: nth($font-size, 6);
+        margin: auto;
+        text-align: center;
+    }
+    .octavo-item{
+        grid-area: ocho;
+    }
+    .noveno-item{
+        grid-area: nueve;
+    }
+    .decimo-item{
+        grid-area: diez;
+    }
+}
 

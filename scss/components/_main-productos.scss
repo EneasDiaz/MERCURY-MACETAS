@@ -1,103 +1,97 @@
-.productos{
-    background-color: #CFC1B4;
-    .productos-primera{
-        text-align: center;
-        h1{
-            padding: 20px;
-            font-size: 60px;
-        }
+
+.productos-primera{
+    text-align: center;
+    h1{
+        padding: 20px;
+        font-size: nth($font-size, 7);
     }
-    .productos-macetas{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+}
+.productos-macetas{
+    text-align: center;
+    @include flex (flex, row, center, center);
+}
+.bkgr{
+    background-color: nth($paleta, 1);
+    h2{
+        width: 288px;
+        margin: 20px;
+        font-size: nth($font-size, 6);
     }
-    .bkgr{
-        background-color: #A69C92;
-        h2{
-            width: 288px;
+    .productos-macetas-gondola{
+        @include flex (flex, row, center, center);
+        flex-wrap: wrap;
+        .card{
+            border: 1px solid nth($paleta, 4);
             margin: 20px;
-            font-size: 50px;
         }
-        .productos-macetas-gondola{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            .card{
-                border: 1px solid #4B443F;
-                margin: 20px;
-            }
-            .primeras{
-                background-color: #CFC1B4;
-                .card-body{
-                    .btn-primary{
-                        background-color: #4B443F;
+        .primeras{
+            background-color: nth($paleta, 6);
+            .card-body{
+                .btn-primary{
+                    background-color: #4B443F;
+                    border-color: black;
+                    transition: 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                        background-color: black;
                         border-color: black;
-                        &:hover{
-                            background-color: black;
-                            border-color: black;
-                        }
-                        &:active{
-                            background-color: #ca6f37;
-                            border-color: #4B443F;
-                            box-shadow: none;
-                        }
-                        &:focus{
-                            background-color: #4B443F;
-                            border-color: #4B443F;
-                            box-shadow: none;
-                        }
-                        &:active:focus{
-                            box-shadow: none;
-                        }
+                    }
+                    &:active{
+                        background-color: #4B443F;
+                        border-color: #4B443F;
+                        box-shadow: none;
+                    }
+                    &:focus{
+                        background-color: #4B443F;
+                        border-color: #4B443F;
+                        box-shadow: none;
+                    }
+                    &:active:focus{
+                        box-shadow: none;
                     }
                 }
             }
         }
     }
-    .revers{
-        h2{
-            order: 1;
-            width: 288px;
+}
+.revers{
+    h2{
+        order: 1;
+        width: 288px;
+        margin: 20px;
+        font-size: nth($font-size, 6);
+    }
+    .productos-macetas-gondola{
+        @include flex (flex, row, center, center);
+        flex-wrap: wrap;
+        .card{
+            border: 1px solid nth($paleta, 4);
             margin: 20px;
-            font-size: 50px;
         }
-        .productos-macetas-gondola{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            .card{
-                border: 1px solid #4B443F;
-                margin: 20px;
-            }
-            .segundas{
-                background-color: #A69C92;
-                .card-body{
-                    .btn-primary{
-                        background-color: #4B443F;
+        .segundas{
+            background-color: nth($paleta, 1);
+            .card-body{
+                .btn-primary{
+                    background-color: #4B443F;
+                    border-color: black;
+                    transition: 0.5s;
+                    &:hover{
+                        transform: scale(1.1);
+                        background-color: black;
                         border-color: black;
-                        &:hover{
-                            background-color: black;
-                            border-color: black;
-                        }
-                        &:active{
-                            background-color: #ca6f37;
-                            border-color: #4B443F;
-                            box-shadow: none;
-                        }
-                        &:focus{
-                            background-color: #4B443F;
-                            border-color: #4B443F;
-                            box-shadow: none;
-                        }
-                        &:active:focus{
-                            box-shadow: none;
-                        }
+                    }
+                    &:active{
+                        background-color: #4B443F;
+                        border-color: #4B443F;
+                        box-shadow: none;
+                    }
+                    &:focus{
+                        background-color: #4B443F;
+                        border-color: #4B443F;
+                        box-shadow: none;
+                    }
+                    &:active:focus{
+                        box-shadow: none;
                     }
                 }
             }

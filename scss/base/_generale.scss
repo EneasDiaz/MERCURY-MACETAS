@@ -18,3 +18,12 @@ body{
     font-family: 'Oswald', sans-serif;
     color: #4B443F;
 }
+
+main{
+    background-color: nth($paleta, 6);
+}
+
+.active{
+    transform: scale(1.2);
+    font-weight: 400;
+}

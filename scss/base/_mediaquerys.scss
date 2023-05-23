@@ -1,60 +1,53 @@
 @media screen and (max-width:1550px){
-    .galeria{
-        .galeria-primera{
-            img{
-                width: 80%;
-                height: 500px;
-            }
+    .galeria-primera{
+        img{
+            width: 80%;
+            height: 500px;
         }
-        .galeria-segunda-contenedor{
-            padding: 75px; ;
-            display: grid;
-            grid-auto-rows: 200px;
-            grid-template-columns: repeat(4,1fr);
-            gap: 30px;
-            grid-template-areas: 
-            "uno dos tres tres"
-            "uno dos tres tres"
-            "cuatro cuatro cuatro cuatro"
-            "cinco cinco seis seis"
-            "cinco cinco seis seis"
-            "siete siete siete siete"
-            "ocho nueve diez diez"
-            "ocho nueve diez diez"
-            ;
-        }
+    }
+    .galeria-segunda-contenedor{
+        padding: 75px; ;
+        display: grid;
+        grid-auto-rows: 200px;
+        grid-template-columns: repeat(4,1fr);
+        gap: 30px;
+        grid-template-areas: 
+        "uno dos tres tres"
+        "uno dos tres tres"
+        "cuatro cuatro cuatro cuatro"
+        "cinco cinco seis seis"
+        "cinco cinco seis seis"
+        "siete siete siete siete"
+        "ocho nueve diez diez"
+        "ocho nueve diez diez"
+        ;
     }
     .nosotros{
-        .nosotros-segunda{
-            div{ 
-                p{
-                    font-size: 25px;
-                }
+        .nosotros-taller{ 
+            p{
+                font-size: nth($font-size, 2);
             }
         }
     }
-    .contacto-contenedor{
-        .contacto-contenedor-primera{
-            flex-direction: column;
-            align-items: center;
-            .contacto-contenedor-primera-numero{
-                height: 550px;
+    .contacto-contenedor-primera{
+        @include flex (flex, column, center, center);
+        .contacto-contenedor-primera-numero{
+            height: 550px;
             width: 100%;
             flex-direction: row;
-                div{
-                    width: 50%;
-                    h2{
-                        font-size: 60px;
-                    }
-                    p{
-                        width: 90%;
-                    }
+            div{
+                width: 50%;
+                h2{
+                    font-size: nth($font-size, 7);
+                }
+                p{
+                    width: 90%;
                 }
             }
-            .contacto-contenedor-primera-fomulario{
-                form{
-                    margin: 40px;
-                }
+        }
+        .contacto-contenedor-primera-fomulario{
+            form{
+                margin: 40px;
             }
         }
     }
@@ -72,53 +65,48 @@
     .productos-macetas{
         flex-direction: column;
     }
-    .productos{
-        .revers{
-            h2{
-                order: 0;
-            }
+    .revers{
+        h2{
+            order: 0;
         }
     }
-    .contacto-contenedor{
-        .contacto-contenedor-primera{
-            .contacto-contenedor-primera-fomulario{
-                width: 70%;
-            }
+    .contacto-contenedor-primera{
+        .contacto-contenedor-primera-fomulario{
+            width: 70%;
         }
     }
 }
 
 @media screen and (max-width:1150px){
-    .galeria{
-        .galeria-segunda-contenedor{
-            padding: 75px; ;
-            display: grid;
-            grid-auto-rows: 200px;
-            grid-template-columns: repeat(3,1fr);
-            gap: 30px;
-            grid-template-areas: 
-            "uno dos tres"
-            "cuatro cuatro tres"
-            "cinco cinco seis"
-            "cinco cinco seis"
-            "siete siete siete"
-            "ocho nueve diez"
-            "ocho nueve diez"
-            ;
-        }
+    .galeria-segunda-contenedor{
+        padding: 75px; ;
+        display: grid;
+        grid-auto-rows: 200px;
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+        grid-template-areas: 
+        "uno dos tres"
+        "cuatro cuatro tres"
+        "cinco cinco seis"
+        "cinco cinco seis"
+        "siete siete siete"
+        "ocho nueve diez"
+        "ocho nueve diez"
+        ;
     }
     .nosotros{
-        .nosotros-segunda{
-            div{
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-                img{
-                    width: 320px;
-                }
-                p{
-                    width: 75%;
-                }
+        h1{
+            margin: 15px;
+        }
+        .nosotros-taller{
+        flex-direction: column;
+        text-align: center;
+            img{
+                width: 320px;
+                margin: 0;
+            }
+            p{
+                width: 75%;
             }
         }
     }  
@@ -127,15 +115,11 @@
 @media screen and (max-width:1000px){
     .hero{
         .hero-contenedor{
-            display: flex;
-            justify-content: center;
-            align-items: end;
+            @include flex(flex, row, center, end);
             div{
-                align-items: center;
+                @include flex(flex, column, space-between, center);
                 margin: 0;
                 height: 100%;
-                display: flex;
-                justify-content: space-between;
                 h1{
                     margin: 0;
                     padding-top: 25px;
@@ -156,20 +140,16 @@
             }
         }
     }
-    .galeria{
-        .galeria-segunda-contenedor
-        div{
-            p{
-                font-size: 35px;
-            }
+    .galeria-segunda-contenedor
+    div{
+        p{
+            font-size: nth($font-size, 4);
         }
     }
-    .contacto-contenedor{
-        .contacto-contenedor-primera{
-            .contacto-contenedor-primera-numero{
-                flex-direction: column;
-                height: auto;
-            }
+    .contacto-contenedor-primera{
+        .contacto-contenedor-primera-numero{
+            flex-direction: column;
+            height: auto;
         }
     }
 }
@@ -178,38 +158,34 @@
     .navbar-collapse{
         border: 1px solid #4B443F;
     }
-    .contacto-contenedor{
-        .contacto-contenedor-primera{
-            .contacto-contenedor-primera-fomulario{
-                width: 90%;
-            }
+    .contacto-contenedor-primera{
+        .contacto-contenedor-primera-fomulario{
+            width: 90%;
         }
     }
 }
 
 @media screen and (max-width:900px){
-    .galeria{
-        .galeria-primera{
-            img{
-                width: 100%;
-            }
+    .galeria-primera{
+        img{
+            width: 85%;
         }
-        .galeria-segunda-contenedor{
-            padding: 75px; ;
-            display: grid;
-            grid-auto-rows: 200px;
-            grid-template-columns: repeat(2,1fr);
-            gap: 30px;
-            grid-template-areas: 
-            "uno dos "
-            "tres cuatro"
-            "tres cuatro"
-            "cinco seis"
-            "siete ocho"
-            "siete ocho"
-            "nueve diez"
-            ;   
-        }
+    }
+    .galeria-segunda-contenedor{
+        padding: 75px; ;
+        display: grid;
+        grid-auto-rows: 200px;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+        grid-template-areas: 
+        "uno dos "
+        "tres cuatro"
+        "tres cuatro"
+        "cinco seis"
+        "siete ocho"
+        "siete ocho"
+        "nueve diez"
+        ;
     }
 }
 
@@ -219,21 +195,6 @@
             img{
                 width: 250px;
                 height: 250px;
-            }
-        }
-    }
-    .nosotros{
-        .nosotros-primera{
-            .nosotros-primera-cards{
-                div{
-                    width: 80%;
-                    img{
-                        width: 330px;
-                    }
-                    p{
-                        font-size: 20px;
-                    }
-                }
             }
         }
     }
@@ -250,14 +211,12 @@
             }
         }
     }
-    .contacto-contenedor{
-        .contacto-contenedor-primera{
-            .contacto-contenedor-primera-fomulario{
-                width: 100%;
-                form{
-                    margin: 20px;
-                    padding: 20px;
-                }
+    .contacto-contenedor-primera{
+        .contacto-contenedor-primera-fomulario{
+            width: 100%;
+            form{
+                margin: 20px;
+                padding: 20px;
             }
         }
     }
@@ -270,11 +229,9 @@
             width: 80%;
         }
     }
-    .galeria{
-        .galeria-primera{
-            img{
-                height: 300px;
-            }
+    .galeria-primera{
+        img{
+            height: 300px;
         }
     }
 }
@@ -282,43 +239,30 @@
 @media screen and (max-width:700px){
     .index-segunda{
         p{
-            font-size: 30px;
+            font-size: nth($font-size, 3);
             font-weight: 300;
         }
     }
-    .galeria{
-        .galeria-segunda-contenedor{
-            padding: 35px;
-            display: grid;
-            grid-auto-rows: auto;
-            grid-template-columns: repeat(1,1fr);
-            gap: 30px;
-            grid-template-areas: 
-            "uno"
-            "dos"
-            "tres"
-            "cuatro"
-            "cinco"
-            "seis"
-            "siete"
-            "ocho"
-            "nueve"
-            "diez"
-            ;
-            div{
-                padding: 30px;
-            }
-        }
-    }
-    .nosotros{
-        .nosotros-primera{
-            .nosotros-primera-cards{ 
-                div{
-                    img{
-                        width: 270px;
-                    }
-                }
-            }
+    .galeria-segunda-contenedor{
+        padding: 35px;
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+        grid-template-areas: 
+        "uno"
+        "dos"
+        "tres"
+        "cuatro"
+        "cinco"
+        "seis"
+        "siete"
+        "ocho"
+        "nueve"
+        "diez"
+        ;
+        div{
+            padding: 30px;
         }
     }
 }
@@ -331,13 +275,11 @@
             }
         }
     }
-    .contacto-contenedor{
-        .contacto-contenedor-primera{
-            .contacto-contenedor-primera-numero{
-                div{
-                    width: 100%;
-                    padding: 20px;
-                }
+    .contacto-contenedor-primera{
+        .contacto-contenedor-primera-numero{
+            div{
+                width: 100%;
+                padding: 20px;
             }
         }
     }
@@ -346,7 +288,7 @@
 @media screen and (max-width:600px){
     .index-segunda{
         p{
-            font-size: 25px;
+            font-size: nth($font-size, 2);
             font-weight: 400;
         }
     }
@@ -358,17 +300,19 @@
             div{
                 width: 100%;
                 p{
-                    font-size: 25px;
+                    font-size: nth($font-size, 2);
                 }
             }
         }
     }
     .nosotros{
-        .nosotros-segunda{
-            div{
-                p{
-                    width: 100%;
-                }
+        h1{
+            margin: 0;
+        }
+        .nosotros-taller{
+            margin: 0;
+            p{
+                width: 100%;
             }
         }
     }
@@ -379,40 +323,34 @@
     .index-primera{
         flex-direction: column-reverse;
     }
-    .galeria{
-        .galeria-primera{
-            img{
-                height: 250px;
-            }
+    .galeria-primera{
+        img{
+            height: 200px;
         }
     }
     .nosotros{
-        .nosotros-segunda{
-            div{
-                p{
-                    font-size: 17px;
-                    font-weight: 300;
-                }
+        .nosotros-taller{
+            p{
+                font-size: 17px;
+                font-weight: 300;
             }
         }
     }
-    .contacto-contenedor{
-        .contacto-contenedor-primera{
-            .contacto-contenedor-primera-numero{
-                div{
-                    h1{
-                        font-size: 40px;
-                    }
-                    h2{
-                        font-size: 40px;
-                    }
-                    p{
-                        font-size: 20px;
-                        margin: 0;
-                    }
-                    iframe{
-                        margin-top: 10px;
-                    }
+    .contacto-contenedor-primera{
+        .contacto-contenedor-primera-numero{
+            div{
+                h1{
+                    font-size: nth($font-size, 5);
+                }
+                h2{
+                    font-size: nth($font-size, 5);
+                }
+                p{
+                    font-size: nth($font-size, 1);
+                    margin: 0;
+                }
+                iframe{
+                    margin-top: 10px;
                 }
             }
         }
@@ -423,28 +361,13 @@
     .index-segunda{
         p{
             width: 90%;
-            font-size: 20px;
+            font-size: nth($font-size, 1);
         }
     }
     .nosotros{
-        .nosotros-primera{
-            .nosotros-primera-cards{
-                div{
-                    img{
-                        width: 250px;
-                    }
-                    p{
-                        font-size: 17px;
-                        font-weight: 400;
-                    }
-                }
-            }
-        }
-        .nosotros-segunda{
-            div{
-                img{
-                    width: 280px;
-                }
+        .nosotros-taller{
+            img{
+                width: 280px;
             }
         }
     }
@@ -456,31 +379,27 @@
         .hero-contenedor{
             div{
                 h1{
-                    font-size: 35px;
+                    font-size: nth($font-size, 4);
                 }
                 p{
-                    font-size: 20px;
+                    font-size: nth($font-size, 1);
                     font-weight: 300;
                 }
             }
         }
     }
-    .galeria{
-        .galeria-segunda-contenedor{
-            div{
-                p{
-                    font-size: 30px;
-                }
+    .galeria-segunda-contenedor{
+        div{
+            p{
+                font-size:nth($font-size, 3);    
             }
         }
     }
-    .contacto-contenedor{
-        .contacto-contenedor-primera{
-            .contacto-contenedor-primera-numero{
-                div{
-                    iframe{
-                        width: 100%;
-                    }
+    .contacto-contenedor-primera{
+        .contacto-contenedor-primera-numero{
+            div{
+                iframe{
+                    width: 100%;
                 }
             }
         }

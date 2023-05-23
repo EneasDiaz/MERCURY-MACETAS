@@ -1,32 +1,30 @@
 .hero{
+    background-color: $bg-hero;
     width: 100%;
     .hero-contenedor{
         width: 75%;
         margin: auto;
         position: relative;
         font-size: 0px;
-        display: flex;
-        align-items: center;
+        @include flex (flex, row, start, center);
         div{
             position: absolute;
             height: 65%;
             width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             margin-left: 40px;
+            @include flex (flex, column, center, center);
             h1{
                 text-align: center;
                 margin: auto;
                 font-weight: 500;
-                font-size: 50px;
+                font-size: nth($font-size, 6);
             }
             p{
                 text-align: center;
                 width:75%;
                 margin: auto;
                 font-weight: 300;
-                font-size: 30px;
+                font-size: nth($font-size, 3);
             }
         }
         img{
@@ -39,92 +37,92 @@
 }
 
 .index-primera{
-    background-color: #CFC1B4;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    background-color: nth($paleta, 6);
     text-align: center;
+    @include flex (flex, row, space-evenly, center);
     div{
-        margin: 20px;
-        h3{
-            font-size: 25px;
+        margin-bottom: 20px;
+        p{
+            font-size: nth($font-size, 2);
             margin: 20px;
         }
         a{
-            color: #4B443F;
-            background-color: #91877D;
-            border-radius: 5px;
-            font-size: 20px;
+            color: nth($paleta, 4);
+            background-color: nth($paleta, 3);
+            border-radius: $bd-radius;
+            font-size: nth($font-size, 1);
             margin: 5px;
             padding: 10px;
+            transition: 0.5s;
+            &:hover{
+                transform: scale(1.5);
+            }
         }
     }
 }
 
 .index-segunda{
-    background-color:#A69C92 ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: nth($paleta, 1);
     text-align: center;
+    @include flex (flex, column, center, center);
     h2{
-        font-size: 70px;
+        font-size: nth($font-size, 7);
         font-weight: 400;
         margin: 20px;
     }
     p{
         width: 75%;
-        font-size: 35px;
+        font-size: nth($font-size, 4);
         font-weight: 300;
         margin:30px;
     }
     div{
         width: 100%;
-        display: flex;
-        justify-content: space-evenly;
+        @include flex (flex, row, space-evenly, center);
         flex-wrap: wrap;
         img{
             margin: 40px;
             width: 345px;
             height: 345px;
-            border-radius: 20px;
             object-fit: cover;
-            box-shadow: 4px 5px 15px -2px rgba(0,0,0,0.67);
-            -webkit-box-shadow: 4px 5px 15px -2px rgba(0,0,0,0.67);
-            -moz-box-shadow: 4px 5px 15px -2px rgba(0,0,0,0.67);
+            border-radius: $bd-radius;
+            @extend %sombra;
         }
     }
 }
 
 .index-tercera{
-    background-color: #CFC1B4;
-    display:flex;
-    justify-content: space-evenly;
+    padding: 30px;
+    background-color: nth($paleta, 6);
     text-align: center;
+    @include flex (flex, row, space-evenly, center);
     flex-wrap: wrap;
     a{
-        color: #4B443F;
+        color: nth($paleta, 4);
         width: 345px;
         margin: 40px;
         div{
-            background-color:#A69C92 ;
+            background: linear-gradient(0deg, rgba(207,193,180,1) 0%, rgba(166,156,146,1) 84%);
             border-radius: 20px;
+            transition: 0.8s;
+            &:hover{
+                transform: scale(1.05);
+                @extend %sombra;
+            }
             h3{
-                font-size: 35px;
+                font-size: nth($font-size, 4);
                 padding: 20px;
             }
             p{
-                font-size: 25px;
+                font-size: nth($font-size, 2);
                 margin: 20px;
             }
             img{
                 width: 250px;
                 height: 250px;
                 margin: 20px;
-                border-radius: 20px;
-                box-shadow: 4px 5px 15px -2px rgba(0,0,0,0.67);
-                -webkit-box-shadow: 4px 5px 15px -2px rgba(0,0,0,0.67);
-                -moz-box-shadow: 4px 5px 15px -2px rgba(0,0,0,0.67);
+                border-radius: $bd-radius;
+                @extend %sombra;
             }
         }
     }

@@ -1,31 +1,30 @@
 footer{
-    background-color: #91877D;
+    background-color: nth($paleta, 3);
+    border-top: 1px solid nth($paleta, 4);
     text-align: center;
     padding-bottom: 10px;
     div{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex (flex, row, space-between, center);
         h4{
-            font-size: 30px;
+            font-size: nth($font-size, 3);
             margin: 10px;
         }
         div{
             margin-right: 10px;
             a{
                 margin: 5px;
-                color: #4B443F;
+                color: nth($paleta, 4);
                 i{
-                    font-size: 35px;
+                    font-size: nth($font-size, 4);
                     &:hover{
-                        color: #4B443F;
+                        color: nth($paleta, 4);
                     }
                 }
             }
         }
     }
     p{
-        font-size: 20px;
+        font-size: nth($font-size, 1);
         margin-bottom: 0;
     }
 }

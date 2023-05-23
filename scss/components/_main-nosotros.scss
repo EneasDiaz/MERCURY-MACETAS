@@ -1,63 +1,28 @@
 .nosotros{
-    background-color: #CFC1B4;
-    .nosotros-primera{
-        text-align: center;
-        h1{
-            font-size: 60px;
-            padding: 20px;
-        }
-        .nosotros-primera-cards{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: center;
-            div{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                width: 345px;
-                margin: 40px;
-                h2{
-                    margin-bottom: 10px;
-                    font-size: 50px;
-                }
-                img{
-                    margin: 10px;
-                    width: 70%;
-                    border-radius: 10px;
-                    box-shadow: 0px 1px 44px -4px rgba(0,0,0,0.75);
-                    -webkit-box-shadow: 0px 1px 44px -4px rgba(0,0,0,0.75);
-                    -moz-box-shadow: 0px 1px 44px -4px rgba(0,0,0,0.75);
-                }
-                p{
-                    margin: 10px;
-                    font-size: 20px;
-                }
-            }
-        }
+    height: 100%;
+    background-color: nth($paleta, 6);
+    text-align: center;
+    @include flex (flex, column, start, center);
+    h1{
+        font-size: nth($font-size, 7);
+        margin: 30px;
+        padding: 20px;
     }
-    .nosotros-segunda{
-        div{
-            padding: 20px;
-            display: flex;
-            text-align: start;
-            justify-content: center;
-            align-items: center;
-            img{
-                width: 30%;
-                border-radius: 10px;
-                box-shadow: 0px 1px 44px -4px rgba(0,0,0,0.75);
-                -webkit-box-shadow: 0px 1px 44px -4px rgba(0,0,0,0.75);
-                -moz-box-shadow: 0px 1px 44px -4px rgba(0,0,0,0.75);
-            }
-            p{
-                font-size: 35px;
-                width: 40%;
-                margin: 30px;
-            }
+    .nosotros-taller{
+        margin: 20px;
+        padding: 20px;
+        text-align: start;
+        @include flex (flex, row, center, center);
+        img{
+            margin: 20px;
+            width: 30%;
+            border-radius: $bd-radius;
+            @extend %sombra;
+        }
+        p{
+            font-size: nth($font-size, 4);
+            width: 40%;
+            margin: 30px;
         }
     }
 }
