@@ -26,3 +26,23 @@
         }
     }
 }
+.nosotros-artisas{
+    @include flex(flex, row, center, space-between);
+    flex-wrap: wrap;
+    div{
+        @include flex(flex, column, center, center);
+        text-align: center;
+        width: 345px;
+        margin: 40px;
+        h2{
+            margin-bottom: 10px;
+            font-size: nth($font-size, 6);
+        }
+        img{
+            margin: 10px;
+            width: 70%;
+            border-radius: $bd-radius;
+            @extend %sombra
+        }
+    }
+}

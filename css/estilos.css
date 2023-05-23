@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
-.index-segunda div img, .index-tercera a div:hover, .index-tercera a div img, .galeria-primera img, .galeria-segunda-contenedor div .galeria-foto, .nosotros .nosotros-taller img {
+.index-segunda div img, .index-tercera a div:hover, .index-tercera a div img, .galeria-primera img, .galeria-segunda-contenedor div .galeria-foto, .nosotros .nosotros-taller img, .nosotros-artisas div img {
   box-shadow: 0px 1px 44px -4px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 1px 44px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 1px 44px -4px rgba(0, 0, 0, 0.75); }
@@ -343,6 +343,28 @@ header {
       font-size: 35px;
       width: 40%;
       margin: 30px; }
+
+.nosotros-artisas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
+  flex-wrap: wrap; }
+  .nosotros-artisas div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 345px;
+    margin: 40px; }
+    .nosotros-artisas div h2 {
+      margin-bottom: 10px;
+      font-size: 50px; }
+    .nosotros-artisas div img {
+      margin: 10px;
+      width: 70%;
+      border-radius: 10px; }
 
 .contacto-contenedor-primera {
   display: flex;
