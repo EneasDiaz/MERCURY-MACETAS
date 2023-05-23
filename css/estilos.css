@@ -96,16 +96,17 @@ header {
     .index-primera div p {
       font-size: 25px;
       margin: 20px; }
-    .index-primera div a {
-      color: #4B443F;
-      background-color: #91877D;
-      border-radius: 10px;
-      font-size: 20px;
-      margin: 5px;
-      padding: 10px;
+    .index-primera div div {
       transition: 0.5s; }
-      .index-primera div a:hover {
-        transform: scale(1.5); }
+      .index-primera div div:hover {
+        transform: scale(1.1); }
+      .index-primera div div a {
+        color: #4B443F;
+        background-color: #91877D;
+        border-radius: 10px;
+        font-size: 20px;
+        margin: 5px;
+        padding: 10px; }
 
 .index-segunda {
   background-color: #A69C92;
@@ -138,7 +139,7 @@ header {
       border-radius: 10px; }
 
 .index-tercera {
-  padding: 30px;
+  padding: 60px;
   background-color: #CFC1B4;
   text-align: center;
   display: flex;
@@ -149,23 +150,28 @@ header {
   .index-tercera a {
     color: #4B443F;
     width: 345px;
-    margin: 40px; }
+    margin: 30px; }
     .index-tercera a div {
+      height: 500px;
       background: linear-gradient(0deg, #cfc1b4 0%, #a69c92 84%);
       border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
       transition: 0.8s; }
       .index-tercera a div:hover {
         transform: scale(1.05); }
       .index-tercera a div h3 {
         font-size: 35px;
-        padding: 20px; }
+        margin-top: 20px; }
       .index-tercera a div p {
         font-size: 25px;
-        margin: 20px; }
+        margin: auto; }
       .index-tercera a div img {
         width: 250px;
         height: 250px;
-        margin: 20px;
+        margin-bottom: 20px;
         border-radius: 10px; }
 
 .galeria-primera {
@@ -593,7 +599,9 @@ footer {
   .nosotros .nosotros-taller {
     margin: 0; }
     .nosotros .nosotros-taller p {
-      width: 100%; } }
+      width: 100%; }
+  .index-tercera {
+    padding: 60px 0; } }
 
 @media screen and (max-width: 500px) {
   .index-primera {
