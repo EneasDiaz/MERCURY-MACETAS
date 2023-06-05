@@ -1,4 +1,24 @@
 @media screen and (max-width:1550px){
+    .hero{
+        .hero-contenedor{
+            div{
+                p{
+                    font-size: nth($font-size, 2);
+                }
+            }
+        }
+    }
+    .index-segunda{
+        p{
+        font-size: nth($font-size, 2);
+        }
+        div{
+            img{
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
     .galeria-primera{
         img{
             width: 80%;
@@ -36,11 +56,17 @@
             width: 100%;
             flex-direction: row;
             div{
+                h1{
+                    font-size: nth($font-size, 5);
+                }
+            }
+            div{
                 width: 50%;
                 h2{
-                    font-size: nth($font-size, 7);
+                    font-size: nth($font-size, 5);
                 }
                 p{
+                    font-size: nth($font-size, 2);
                     width: 90%;
                 }
             }
@@ -189,16 +215,6 @@
     }
 }
 
-@media screen and (max-width:870px){
-    .index-segunda{
-        div{
-            img{
-                width: 250px;
-                height: 250px;
-            }
-        }
-    }
-}
 
 @media screen and (max-width:825px){
     .hero{
@@ -225,7 +241,6 @@
 @media screen and (max-width:750px){
     .index-segunda{
         p{
-            margin: 0;
             width: 80%;
         }
     }
@@ -239,7 +254,7 @@
 @media screen and (max-width:700px){
     .index-segunda{
         p{
-            font-size: nth($font-size, 3);
+            font-size: nth($font-size, 1);
             font-weight: 300;
         }
     }
@@ -285,25 +300,28 @@
     }
 }
 
-@media screen and (max-width:600px){
-    .index-segunda{
-        p{
-            font-size: nth($font-size, 2);
-            font-weight: 400;
-        }
-    }
-}
 
 @media screen and (max-width:560px){
     .hero{
         .hero-contenedor{
             div{
                 width: 100%;
+                h1{
+                    font-size: nth($font-size, 4);
+                    span{
+                        font-size: nth($font-size, 4)/1.8;
+                    }
+                }
                 p{
-                    font-size: nth($font-size, 2);
+                    margin-left:25px;
+                    margin-right: 25px;
+                    font-size: nth($font-size, 1);
                 }
             }
         }
+    }
+    .index-tercera{
+        padding: 60px 0;
     }
     .nosotros{
         h1{
@@ -315,9 +333,6 @@
                 width: 100%;
             }
         }
-    }
-    .index-tercera{
-        padding: 60px 0;
     }
 }
 
@@ -382,7 +397,10 @@
         .hero-contenedor{
             div{
                 h1{
-                    font-size: nth($font-size, 4);
+                    font-size: nth($font-size, 3);
+                    span{
+                        font-size: nth($font-size, 3)/1.8;
+                    }
                 }
                 p{
                     font-size: nth($font-size, 1);
