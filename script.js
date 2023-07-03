@@ -77,4 +77,4 @@ while (seguir_comprando) {
     seguir_comprando = confirm("Desea seguir comprando?")
 }
 
-console.log(total)
+alert("El valor total de la compra es de " + total)
