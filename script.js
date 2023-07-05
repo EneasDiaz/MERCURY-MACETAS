@@ -7,6 +7,10 @@ let totem = 7500
 let circulo = 2500
 let ovalo = 2500 
 let mediafera = 3000
+let maceta = ""
+let carrito = ""
+let valor = 0
+let cantidad_macetas = 0
 let total = 0
 let seguir_comprando = true
 
@@ -17,7 +21,7 @@ function valida(maceta) {
 
 function eleccion() {
     let precio = 0
-    let maceta = prompt (" Que maceta queria comprar (PIRAMYD, OVNI, ESPEJO, CUFERA, ROMFERA, TOTEM, CIRCULO, OVALO, MEDIAFERA)");
+    maceta = prompt (" Que maceta queria comprar (PIRAMYD, OVNI, ESPEJO, CUFERA, ROMFERA, TOTEM, CIRCULO, OVALO, MEDIAFERA)");
     while (!valida(maceta.toLowerCase())) {
         alert("la maceta que elijio no se encuentra")
         maceta = prompt (" Que maceta queria comprar (PIRAMYD, OVNI, ESPEJO, CUFERA, ROMFERA, TOTEM, CIRCULO, OVALO, MEDIAFERA)");
@@ -56,8 +60,7 @@ function eleccion() {
 
 
 function cantidad(precio) {
-    let cantidad_macetas = Number(prompt("¿Cuantas macetas queria? Tienes un descuanto (15%) a partir de 3 unidades de la misma."))
-    let valor = 0
+    cantidad_macetas = Number(prompt("¿Cuantas macetas queria? Tienes un descuanto (15%) a partir de 3 unidades de la misma."))
     while ((cantidad_macetas <= 0) || (!Number.isInteger(cantidad_macetas))) {
         alert(" la cantidad que puso no puede ser ejecutada")
         cantidad_macetas = Number(prompt("¿Cuantas macetas queria? Tienes un descuanto (15%) a partir de 3 unidades de la misma."))
@@ -68,6 +71,7 @@ function cantidad(precio) {
     else {
         valor = cantidad_macetas * precio * 0.85
     }
+    carrito += `-${maceta} x ${cantidad_macetas} = ${valor}\n`
     console.log(valor)
     return valor
 }
@@ -77,4 +81,4 @@ while (seguir_comprando) {
     seguir_comprando = confirm("Desea seguir comprando?")
 }
 
-alert("El valor total de la compra es de " + total)
+alert("Macetas:\n" + carrito + "\n" + "El valor total de la compra es de " + total + " pesos")
