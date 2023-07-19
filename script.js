@@ -1,84 +1,89 @@
-let piramyd = 5500
-let ovni = 4500
-let espejo = 3500
-let cufera = 6500
-let romfera = 6500
-let totem = 7500
-let circulo = 2500
-let ovalo = 2500 
-let mediafera = 3000
-let maceta = ""
-let carrito = ""
-let valor = 0
-let cantidad_macetas = 0
-let total = 0
-let seguir_comprando = true
+const productos = []
 
+class Macetas {
+    constructor (id, tipo, nombre, precio){
+        this.id = id
+        this.tipo = tipo
+        this.nombre = nombre
+        this.precio = precio
+    }
+}
+
+const piramyd = new Macetas (1, "petiza", "piramyd", 5500);
+const ovni = new Macetas (2, "petiza", "ovni", 4500);
+const espejo = new Macetas (3, "petiza", "espejo", 3500);
+const cufera = new Macetas (4, "columna", "cufera", 6500);
+const romfera = new Macetas (5, "columna", "romfera", 6500);
+const totem = new Macetas (6, "columna", "totem", 7500);
+const circulo = new Macetas (7, "plato", "circulo", 2500);
+const ovalo = new Macetas (8, "plato", "ovalo", 2500);
+const mediafera = new Macetas (9, "plato", "mediafera", 3000);
+
+productos.push(piramyd, ovni, espejo, cufera, romfera, totem, circulo, ovalo, mediafera)
 
 function valida(maceta) {
-    return (maceta == "piramyd") || (maceta == "ovni") || (maceta =="espejo" ) || (maceta == "cufera" ) || (maceta == "romfera" ) || (maceta ==  "totem") || (maceta == "circulo") || (maceta == "ovalo") || (maceta == "mediafera") 
+    for (const name of productos) {
+        if (name.nombre === maceta ){
+            return true
+        }
+    }
 }
 
 function eleccion() {
-    let precio = 0
-    maceta = prompt (" Que maceta queria comprar (PIRAMYD, OVNI, ESPEJO, CUFERA, ROMFERA, TOTEM, CIRCULO, OVALO, MEDIAFERA)");
+    let maceta = prompt ( `Que maceta queria comprar: ${productos.map((x) => " " + x.nombre.toUpperCase() )}.`);
     while (!valida(maceta.toLowerCase())) {
-        alert("la maceta que elijio no se encuentra")
-        maceta = prompt (" Que maceta queria comprar (PIRAMYD, OVNI, ESPEJO, CUFERA, ROMFERA, TOTEM, CIRCULO, OVALO, MEDIAFERA)");
+        alert(`la maceta que elijio no se encuentra`)
+        maceta = prompt (`Que maceta queria comprar: ${productos.map((x) => " " + x.nombre.toUpperCase() )}.`);
     }
-    switch (maceta.toLowerCase()) {
-        case "piramyd" :
-            precio = piramyd
-            break;
-        case "ovni" :
-            precio = ovni
-            break;
-        case "espejo" :
-            precio = espejo
-            break;
-        case "cufera" :
-            precio = cufera
-            break;
-        case "romfera" :
-            precio = romfera
-            break;
-        case "totem" :
-            precio = totem
-            break;
-        case "circulo" :
-            precio = circulo
-            break;
-        case "ovalo" :
-            precio = ovalo
-            break;
-        case "mediafera" :
-            precio = mediafera
-            break;
-    }
-    return precio
+    return productos.find((x) => x.nombre === maceta.toLowerCase())
 }
 
+const carrito = []
 
 function cantidad(precio) {
-    cantidad_macetas = Number(prompt("¿Cuantas macetas queria? Tienes un descuanto (15%) a partir de 3 unidades de la misma."))
+    let cantidad_macetas = Number(prompt(`¿Cuantas macetas queria? Tienes un descuento (15%) a partir de 3 unidades.`))
     while ((cantidad_macetas <= 0) || (!Number.isInteger(cantidad_macetas))) {
-        alert(" la cantidad que puso no puede ser ejecutada")
-        cantidad_macetas = Number(prompt("¿Cuantas macetas queria? Tienes un descuanto (15%) a partir de 3 unidades de la misma."))
+        alert(`la cantidad que puso no puede ser ejecutada`)
+        cantidad_macetas = Number(prompt(`¿Cuantas macetas queria? Tienes un descuento (15%) a partir de 3 unidades.`))
     }
-    if ( cantidad_macetas <= 2 ) {
-        valor = cantidad_macetas * precio
+    for (let i = 0; i < cantidad_macetas; i++) {
+        carrito.push(precio)
     }
-    else {
-        valor = cantidad_macetas * precio * 0.85
-    }
-    carrito += `-${maceta} x ${cantidad_macetas} = ${valor}\n`
-    console.log(valor)
-    return valor
 }
 
+let seguir_comprando = true
+
 while (seguir_comprando) {
-    total += cantidad(eleccion())
+    cantidad(eleccion())
     seguir_comprando = confirm("Desea seguir comprando?")
 }
 
-alert("Macetas:\n" + carrito + "\n" + "El valor total de la compra es de " + total + " pesos")
+function total(subtotal) {
+    if (carrito.length < 3){
+        return subtotal
+    }
+    else{
+        return subtotal * 0.85
+    }
+}
+
+const ticket = []
+
+let papel = ``
+
+
+carrito.forEach( (item) => {
+    let nombre = item.nombre
+    if (ticket[nombre]) {
+        ticket[nombre]++
+    }
+    else{
+        ticket[nombre] = 1
+    }
+});
+
+for (let nombre in ticket){
+    papel += (`Maceta: ${nombre.toUpperCase()} x ${ticket[nombre]}\n`)
+}
+
+alert(`${papel}El valor total de la compra es de ${total(carrito.reduce((acumulador, elemento) => acumulador + elemento.precio, 0))} pesos.`)
