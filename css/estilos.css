@@ -244,79 +244,105 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex-wrap: wrap; }
 
 .bkgr {
   background-color: #A69C92; }
-  .bkgr h2 {
-    width: 288px;
-    margin: 20px;
-    font-size: 50px; }
-  .bkgr .productos-macetas-gondola {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; }
-    .bkgr .productos-macetas-gondola .card {
-      border: 1px solid #4B443F;
-      margin: 20px; }
-    .bkgr .productos-macetas-gondola .primeras {
-      background-color: #CFC1B4; }
-      .bkgr .productos-macetas-gondola .primeras .card-body .btn-primary {
-        background-color: #4B443F;
-        border-color: black;
-        transition: 0.5s; }
-        .bkgr .productos-macetas-gondola .primeras .card-body .btn-primary:hover {
-          transform: scale(1.1);
-          background-color: black;
-          border-color: black; }
-        .bkgr .productos-macetas-gondola .primeras .card-body .btn-primary:active {
-          background-color: #4B443F;
-          border-color: #4B443F;
-          box-shadow: none; }
-        .bkgr .productos-macetas-gondola .primeras .card-body .btn-primary:focus {
-          background-color: #4B443F;
-          border-color: #4B443F;
-          box-shadow: none; }
-        .bkgr .productos-macetas-gondola .primeras .card-body .btn-primary:active:focus {
-          box-shadow: none; }
-
-.revers h2 {
-  order: 1;
-  width: 288px;
-  margin: 20px;
-  font-size: 50px; }
-
-.revers .productos-macetas-gondola {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; }
-  .revers .productos-macetas-gondola .card {
+  .bkgr .card {
     border: 1px solid #4B443F;
     margin: 20px; }
-  .revers .productos-macetas-gondola .segundas {
-    background-color: #A69C92; }
-    .revers .productos-macetas-gondola .segundas .card-body .btn-primary {
+  .bkgr .primeras {
+    background-color: #CFC1B4; }
+    .bkgr .primeras .card-body .btn-primary {
       background-color: #4B443F;
       border-color: black;
       transition: 0.5s; }
-      .revers .productos-macetas-gondola .segundas .card-body .btn-primary:hover {
+      .bkgr .primeras .card-body .btn-primary:hover {
         transform: scale(1.1);
         background-color: black;
         border-color: black; }
-      .revers .productos-macetas-gondola .segundas .card-body .btn-primary:active {
+      .bkgr .primeras .card-body .btn-primary:active {
         background-color: #4B443F;
         border-color: #4B443F;
         box-shadow: none; }
-      .revers .productos-macetas-gondola .segundas .card-body .btn-primary:focus {
+      .bkgr .primeras .card-body .btn-primary:focus {
         background-color: #4B443F;
         border-color: #4B443F;
         box-shadow: none; }
-      .revers .productos-macetas-gondola .segundas .card-body .btn-primary:active:focus {
+      .bkgr .primeras .card-body .btn-primary:active:focus {
         box-shadow: none; }
+
+.revers .card {
+  border: 1px solid #4B443F;
+  margin: 20px; }
+
+.revers .segundas {
+  background-color: #A69C92; }
+  .revers .segundas .card-body .btn-primary {
+    background-color: #4B443F;
+    border-color: black;
+    transition: 0.5s; }
+    .revers .segundas .card-body .btn-primary:hover {
+      transform: scale(1.1);
+      background-color: black;
+      border-color: black; }
+    .revers .segundas .card-body .btn-primary:active {
+      background-color: #4B443F;
+      border-color: #4B443F;
+      box-shadow: none; }
+    .revers .segundas .card-body .btn-primary:focus {
+      background-color: #4B443F;
+      border-color: #4B443F;
+      box-shadow: none; }
+    .revers .segundas .card-body .btn-primary:active:focus {
+      box-shadow: none; }
+
+.tarjeta {
+  width: 100%;
+  max-width: 290px;
+  height: 70px;
+  background: #353535;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out; }
+
+.foto {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 10px; }
+  .foto img {
+    height: 100%;
+    border-radius: 10px; }
+
+.textBox {
+  width: calc(100% - 90px);
+  margin-left: 10px;
+  color: white;
+  font-family: 'Poppins' sans-serif; }
+
+.textContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.span {
+  font-size: 10px; }
+
+.h1 {
+  font-size: 16px;
+  font-weight: bold; }
+
+.p {
+  font-size: 12px;
+  font-weight: lighter; }
+
+.form-control {
+  text-align: center; }
 
 .nosotros {
   height: 100%;

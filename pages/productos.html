@@ -6,18 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- KEYWORDS | 18 palabras como minimo -->
-    <meta name="keywords" content="arte, macetas, escultura, artesanal, jardin, calidad, tierra, plantas, decoracion, personalizar, creacion, estilo, diseño, unico, hogar, vida, casa, patio, ambiente, coleccion, producto, elegancia, detalle, variedad, venta">
+    <meta name="keywords"
+        content="arte, macetas, escultura, artesanal, jardin, calidad, tierra, plantas, decoracion, personalizar, creacion, estilo, diseño, unico, hogar, vida, casa, patio, ambiente, coleccion, producto, elegancia, detalle, variedad, venta">
     <!-- DESCRIPTION | 180 caracteres ideal-->
-    <meta name="description" content="Explora nuestra colección: macetas escultóricas de diseño único. Transforma tu espacio con elegancia. Encuentra la pieza perfecta. ¡Excelencia en cada detalle!">
+    <meta name="description"
+        content="Explora nuestra colección: macetas escultóricas de diseño único. Transforma tu espacio con elegancia. Encuentra la pieza perfecta. ¡Excelencia en cada detalle!">
     <!-- Protocolo OG -->
     <meta property="og:type" content="eCommerce">
     <meta property="og:title" content="Mercury - Macetas | Productos">
-    <meta property="og:url" content="https://mercurymacetas.netlify.app/pages/productos.html"><!--dominio del sitio web una vez subido al srvidor url-->
-    <meta property="og:image" content="https://mercurymacetas.netlify.app/img/logo.png"><!--imagen del logo del sitio web una vez subido al srvidor url-->
-    <meta property="og:description" content="Explora nuestra colección: macetas escultóricas de diseño único. Transforma tu espacio con elegancia. Encuentra la pieza perfecta. ¡Excelencia en cada detalle!">
+    <meta property="og:url" content="https://mercurymacetas.netlify.app/pages/productos.html">
+    <!--dominio del sitio web una vez subido al srvidor url-->
+    <meta property="og:image" content="https://mercurymacetas.netlify.app/img/logo.png">
+    <!--imagen del logo del sitio web una vez subido al srvidor url-->
+    <meta property="og:description"
+        content="Explora nuestra colección: macetas escultóricas de diseño único. Transforma tu espacio con elegancia. Encuentra la pieza perfecta. ¡Excelencia en cada detalle!">
     <!-- FAVICON -->
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
@@ -60,94 +66,28 @@
     <main>
         <section class="productos-primera">
             <h1>MACETAS</h1>
-        </section>
-        <section class="productos-macetas bkgr">
-            <h2>Petizas</h2>
-            <div class="productos-macetas-gondola">
-                <div class="card primeras" style="width: 18rem;">
-                    <img src="../img/PIRAMYD.JPG" class="card-img-top" alt="maceta escultorica">
-                    <div class="card-body">
-                        <h5 class="card-title">PIRAMYD</h5>
-                        <p class="card-text">Dale vida a tus rincones con nuestras diminutas creaciones, perfectas para destacar en estanterias y mesas.</p>
-                        <a href="#" class="btn btn-primary">SUMAR AL CARRITO</a>
-                    </div>
-                </div>
-                <div class="card primeras" style="width: 18rem;">
-                    <img src="../img/OVNI.JPG" class="card-img-top" alt="maceta escultorica">
-                    <div class="card-body">
-                        <h5 class="card-title">OVNI</h5>
-                        <p class="card-text">Añade un toque de encanto a tus escritorios y ventanas con nuestras macetas compactas y versatiles.</p>
-                        <a href="#" class="btn btn-primary">SUMAR AL CARRITO</a>
-                    </div>
-                </div>
-                <div class="card primeras" style="width: 18rem;">
-                    <img src="../img/ESPEJO.JPG" class="card-img-top" alt="maceta escultorica">
-                    <div class="card-body">
-                        <h5 class="card-title">ESPEJO</h5>
-                        <p class="card-text">Nuestras piezas funcionales son ideales para resaltar la belleza de tus plantas en espacios reducidos.</p>
-                        <a href="#" class="btn btn-primary">SUMAR AL CARRITO</a>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carritoModal">Abrir
+                Carrito de Compras</button>
+            <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="carritoModalLabel">Carrito de Compras</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                        <div id="modal" class="modal-body"></div>
+                        <div id="total"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
+                            <button id="botonFinalizarCompra" type="button" class="btn btn-primary">Proceder al Pago</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="productos-macetas revers">
-            <h2>Columna</h2>
-            <div class="productos-macetas-gondola">
-                <div class="card segundas" style="width: 18rem;">
-                    <img src="../img/KUFERA.jpg" class="card-img-top" alt="maceta escultorica">
-                    <div class="card-body">
-                        <h5 class="card-title">CUFERA</h5>
-                        <p class="card-text">Crea un ambiente majestuoso con nuestras columnas decorativas, diseñadas para realzar la elegancia de tus plantas.</p>
-                        <a href="#" class="btn btn-primary">SUMAR AL CARRITO</a>
-                    </div>
-                </div>
-                <div class="card segundas" style="width: 18rem;">
-                    <img src="../img/ROMFERA.JPG" class="card-img-top" alt="maceta escultorica">
-                    <div class="card-body">
-                        <h5 class="card-title">ROMFERA</h5>
-                        <p class="card-text">Añade un toque de grandeza a tu hogar con nuestras columnas ornamentales, ideales para realzar la belleza de tus plantas.</p>
-                        <a href="#" class="btn btn-primary">SUMAR AL CARRITO</a>
-                    </div>
-                </div>
-                <div class="card segundas" style="width: 18rem;">
-                    <img src="../img/TOTEM.JPG" class="card-img-top" alt="maceta escultorica">
-                    <div class="card-body">
-                        <h5 class="card-title">TOTEM</h5>
-                        <p class="card-text">Destaca tus plantas con nuestras columnas funcionales, perfectas para espacios verticales como patios y terrazas.</p>
-                        <a href="#" class="btn btn-primary">SUMAR AL CARRITO</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="productos-macetas bkgr">
-            <h2>Plato</h2>
-            <div class="productos-macetas-gondola">
-                <div class="card primeras" style="width: 18rem;">
-                    <img src="../img/REDONDO.JPG" class="card-img-top" alt="maceta escultorica">
-                    <div class="card-body">
-                        <h5 class="card-title">CIRCULO</h5>
-                        <p class="card-text">Presenta tus plantas con estilo en nuestros platos decorativos, perfectos para mesas y repisas.</p>
-                        <a href="#" class="btn btn-primary">SUMAR AL CARRITO</a>
-                    </div>
-                </div>
-                <div class="card primeras" style="width: 18rem;">
-                    <img src="../img/OVALO.JPG" class="card-img-top" alt="maceta escultorica">
-                    <div class="card-body">
-                        <h5 class="card-title">OVALO</h5>
-                        <p class="card-text">Destaca la belleza natural de tus plantas con nuestros platos funcionales, ideales para interiores y exteriores.</p>
-                        <a href="#" class="btn btn-primary">SUMAR AL CARRITO</a>
-                    </div>
-                </div>
-                <div class="card primeras" style="width: 18rem;">
-                    <img src="../img/ADEFINIR.JPG" class="card-img-top" alt="maceta escultorica">
-                    <div class="card-body">
-                        <h5 class="card-title">MEDIAFERA</h5>
-                        <p class="card-text">Crea un ambiente elegante y minimalista con nuestras macetas tipo plato, perfectas para cualquier rincon de tu hogar.</p>
-                        <a href="#" class="btn btn-primary">SUMAR AL CARRITO</a>
-                    </div>
-                </div>
-            </div>                
-        </section>
+        <section id="macetas_petizas" class="productos-macetas bkgr"></section>
+        <section id="macetas_columnas" class="productos-macetas revers"></section>
+        <section id="macetas_platos" class="productos-macetas bkgr"></section>
     </main>
     <footer>
         <div>
@@ -160,13 +100,12 @@
         </div>
         <p>Copyright © 2020-2023 MercuryMacetas S.R.L.</p>
     </footer>
-    <script src="../script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../productos.js"></script>
+    <script src="../compra.js"></script>
 </body>
+
 </html>

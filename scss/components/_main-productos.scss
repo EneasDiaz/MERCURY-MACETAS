@@ -9,92 +9,122 @@
 .productos-macetas{
     text-align: center;
     @include flex (flex, row, center, center);
+    flex-wrap: wrap;
 }
 .bkgr{
     background-color: nth($paleta, 1);
-    h2{
-        width: 288px;
+    .card{
+        border: 1px solid nth($paleta, 4);
         margin: 20px;
-        font-size: nth($font-size, 6);
     }
-    .productos-macetas-gondola{
-        @include flex (flex, row, center, center);
-        flex-wrap: wrap;
-        .card{
-            border: 1px solid nth($paleta, 4);
-            margin: 20px;
-        }
-        .primeras{
-            background-color: nth($paleta, 6);
-            .card-body{
-                .btn-primary{
-                    background-color: #4B443F;
+    .primeras{
+        background-color: nth($paleta, 6);
+        .card-body{
+            .btn-primary{
+                background-color: #4B443F;
+                border-color: black;
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(1.1);
+                    background-color: black;
                     border-color: black;
-                    transition: 0.5s;
-                    &:hover{
-                        transform: scale(1.1);
-                        background-color: black;
-                        border-color: black;
-                    }
-                    &:active{
-                        background-color: #4B443F;
-                        border-color: #4B443F;
-                        box-shadow: none;
-                    }
-                    &:focus{
-                        background-color: #4B443F;
-                        border-color: #4B443F;
-                        box-shadow: none;
-                    }
-                    &:active:focus{
-                        box-shadow: none;
-                    }
+                }
+                &:active{
+                    background-color: #4B443F;
+                    border-color: #4B443F;
+                    box-shadow: none;
+                }
+                &:focus{
+                    background-color: #4B443F;
+                    border-color: #4B443F;
+                    box-shadow: none;
+                }
+                &:active:focus{
+                    box-shadow: none;
                 }
             }
         }
     }
 }
 .revers{
-    h2{
-        order: 1;
-        width: 288px;
+    .card{
+        border: 1px solid nth($paleta, 4);
         margin: 20px;
-        font-size: nth($font-size, 6);
     }
-    .productos-macetas-gondola{
-        @include flex (flex, row, center, center);
-        flex-wrap: wrap;
-        .card{
-            border: 1px solid nth($paleta, 4);
-            margin: 20px;
-        }
-        .segundas{
-            background-color: nth($paleta, 1);
-            .card-body{
-                .btn-primary{
-                    background-color: #4B443F;
+    .segundas{
+        background-color: nth($paleta, 1);
+        .card-body{
+            .btn-primary{
+                background-color: #4B443F;
+                border-color: black;
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(1.1);
+                    background-color: black;
                     border-color: black;
-                    transition: 0.5s;
-                    &:hover{
-                        transform: scale(1.1);
-                        background-color: black;
-                        border-color: black;
-                    }
-                    &:active{
-                        background-color: #4B443F;
-                        border-color: #4B443F;
-                        box-shadow: none;
-                    }
-                    &:focus{
-                        background-color: #4B443F;
-                        border-color: #4B443F;
-                        box-shadow: none;
-                    }
-                    &:active:focus{
-                        box-shadow: none;
-                    }
+                }
+                &:active{
+                    background-color: #4B443F;
+                    border-color: #4B443F;
+                    box-shadow: none;
+                }
+                &:focus{
+                    background-color: #4B443F;
+                    border-color: #4B443F;
+                    box-shadow: none;
+                }
+                &:active:focus{
+                    box-shadow: none;
                 }
             }
         }
     }
 }
+.tarjeta {
+    width: 100%;
+    max-width: 290px;
+    height: 70px;
+    background: #353535;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease-in-out;
+}
+.foto {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 10px;
+    img{
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+.textBox {
+    width: calc(100% - 90px);
+    margin-left: 10px;
+    color: white;
+    font-family: 'Poppins' sans-serif;
+}
+.textContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.span {
+    font-size: 10px;
+}
+.h1 {
+    font-size: 16px;
+    font-weight: bold;
+}
+.p {
+    font-size: 12px;
+    font-weight: lighter;
+}
+.form-control{
+    text-align: center;
+}
+

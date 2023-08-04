@@ -76,30 +76,30 @@
             <div class="contacto-contenedor-primera-fomulario d-flex align-items-center">
                 <form class="row g-3">
                     <div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">NOMBRES</label>
-                        <input type="text" class="form-control" id="inputEmail4">
+                        <label for="inputNombre" class="form-label">NOMBRES</label>
+                        <input type="text" class="form-control" id="inputNombre">
                     </div>
                     <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">APELLIDOS</label>
-                        <input type="text" class="form-control" id="inputPassword4">
+                        <label for="inputApellido" class="form-label">APELLIDOS</label>
+                        <input type="text" class="form-control" id="inputApellido">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">EMAIL</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="inputEmail" class="form-label">EMAIL</label>
+                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text"></div>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">DIRECCION</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="(CALLE, NUMERO)">
+                        <label for="inputDireccion" class="form-label">DIRECCION</label>
+                        <input type="text" class="form-control" id="inputDireccion" placeholder="(CALLE, NUMERO)">
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress2" class="form-label">ESPECIFICACION</label>
-                        <input type="text" class="form-control" id="inputAddress2"
+                        <label for="inputEspecificacion" class="form-label">ESPECIFICACION</label>
+                        <input type="text" class="form-control" id="inputEspecificacion"
                             placeholder="(CASA, DEPARTAMENTO, NEGOCIO)">
                     </div>
                     <div class="col-md-6">
-                        <label for="inputCity" class="form-label">CIUDAD</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <label for="inputCiudad" class="form-label">CIUDAD</label>
+                        <input type="text" class="form-control" id="inputCiudad">
                     </div>
                     <div class="col-md-4">
                         <label for="inputState" class="form-label">PAIS</label>
@@ -114,12 +114,12 @@
                         </select>
                     </div>
                     <div class="col-md-2">
-                        <label for="inputZip" class="form-label">CO. POSTAL</label>
-                        <input type="text" class="form-control" id="inputZip">
+                        <label for="inputCo" class="form-label">CO. POSTAL</label>
+                        <input type="text" class="form-control" id="inputCo">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">ESCRIBINOS</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="textArea" class="form-label">ESCRIBINOS</label>
+                        <textarea class="form-control" id="textArea" rows="3"></textarea>
                     </div>
                     <div class="col-12 d-flex justify-content-center">
                         <button class="btn" type="submit">ENVIAR</button>
@@ -146,5 +146,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../contacto.js"></script>
 </body>
 </html>
