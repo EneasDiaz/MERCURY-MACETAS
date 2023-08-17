@@ -1,0 +1,11 @@
+[
+    {"id":1, "tipo":"petiza", "nombre":"piramyd", "precio":5500, "imagen":"../img/PIRAMYD.JPG"},
+    {"id":2, "tipo":"petiza", "nombre":"ovni", "precio":4500, "imagen":"../img/OVNI.JPG"},
+    {"id":3, "tipo":"petiza", "nombre":"espejo", "precio":3500, "imagen":"../img/ESPEJO.JPG"},
+    {"id":4, "tipo":"columna", "nombre":"cufera", "precio":6500, "imagen":"../img/KUFERA.jpg"},
+    {"id":5, "tipo":"columna", "nombre":"romfera", "precio":6500, "imagen":"../img/ROMFERA.JPG"},
+    {"id":6, "tipo":"columna", "nombre":"totem", "precio":7500, "imagen":"../img/TOTEM.JPG"},
+    {"id":7, "tipo":"plato", "nombre":"circulo", "precio":2500, "imagen":"../img/REDONDO.JPG"},
+    {"id":8, "tipo":"plato", "nombre":"ovalo", "precio":2500, "imagen":"../img/OVALO.JPG"},
+    {"id":9, "tipo":"plato", "nombre":"mediafera", "precio":3500, "imagen":"../img/ADEFINIR.JPG"}
+]

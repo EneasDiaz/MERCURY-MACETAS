@@ -1,9 +1,5 @@
+//ME FIJO EN EL STORAGE LOCAL SI HAY ALGO AMACENADO PARA QUE ME LO TRAIGA Y SINO LO TRAE VACIO
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
-productos.forEach(producto => {
-    const botonPlus = document.getElementById(producto.id);
-    botonPlus.addEventListener("click", () => sumarAlCarrito(producto));
-});
 
 //BUSCO EN EL CARRITO SI ESTA EL OBJETO LLAMADO 
 //SI NO ESTA, LE AGREGO LA PROPIEDAD CANTIDAD Y LO SUMO AL CARRITO
@@ -17,6 +13,16 @@ function sumarAlCarrito(producto) {
         carrito.push(producto);
         producto.cantidad = 1;
     }
+    Toastify({
+        text: `Se agrego una ${producto.nombre.toUpperCase()} al carrito`,
+        duration: 3000,
+        close: false,
+        gravity: "top",
+        position: "right",
+        style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+    }).showToast();
     guardarLocalStorage();
     actualizarModalCarrito(); 
 }
